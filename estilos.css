@@ -1,0 +1,218 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* Opcional: un efecto suave al pasar el mouse por los demás */
+
+
+
+body {
+    margin: 0;
+    padding-top: 100px; 
+    
+    /* Configuración de imagen idéntica en ambos */
+    background-image: url('../img/backgroundimg.png');
+    background-repeat: no-repeat;
+    background-position: center top; /* CAMBIO: Ambos deben empezar desde arriba */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; 
+    
+    /* Configuración de imagen idéntica en ambos */
+    background-image: url('../img/backgroundimg.png');
+    background-repeat: no-repeat;
+    background-position: center top; /* IGUAL AL BODY */
+    background-size: cover;
+    background-attachment: fixed;
+    
+    z-index: 999; 
+    /* Opcional: una sombra sutil para que el contenido "desaparezca" al subir */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5); 
+}
+
+
+.figure {
+
+    height: 500px;
+    margin-left: 40px;
+    margin-bottom: 150px;
+    margin-bottom: 300px;
+    float:left;
+
+}
+
+.ajusteimg {
+
+    width: 400px;
+    height: 400px;
+    position:relative;
+}
+
+.btn  {
+
+    margin-right: 60px;
+    width: 250px;
+    height: 70px;
+    /* Fondo con 80% de opacidad basado en tus colores originales */
+    background: linear-gradient(135deg, rgba(139, 29, 79, 0.4) 0%, rgba(179, 38, 101, 0.8) 100%) !important;
+    color: white !important;
+    
+    /* Estructura y Borde inferior */
+    border: none;
+    border-bottom: 2px solid #8B1D4F; 
+    border-radius: 4px;
+    
+    /* Estilo de Texto */
+    padding: 12px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    /* Mantenemos la transición por si cambias el color al pasar el mouse, pero sin movimiento */
+    transition: background 0.3s ease;
+}
+
+#navbar-insitra {
+    background-color: #1D1428 !important; /* Semi-transparente */
+    height: 70px;
+    backdrop-filter: blur(12px); /* Efecto de desenfoque de cristal */
+    border-bottom: 2px solid #8B1D4F; /* Línea vinotinto vibrante */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/*contenedor z*/
+
+
+/* Navbar diseñada aparte */
+
+.header{
+
+
+
+    /*colores y diseño*/
+    /*background-color: #1D1428;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 5px 10%;
+
+    /* NUEVO: Posicionamiento fijo */
+    position: fixed;   /* Lo fija a la pantalla */
+    top: 0;            /* Lo pega al borde superior */
+    left: 0;           /* Lo pega al borde izquierdo */
+    width: 100%;       /* Ocupa todo el ancho */
+    z-index: 1000;     /* Asegura que pase por encima de fotos/textos */
+    
+}
+
+.header .logo{
+
+    cursor: pointer;
+}
+.header .logo img{
+
+    padding-left: 0%;
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links li.scrolled-active,
+.header .nav-links li:hover{
+
+transform: scale(1.3);
+
+}
+
+.header .nav-links a{
+    font-size: 1.1rem;
+    color:rgba(227, 83, 0, 0.886);
+    text-decoration: none;
+}
+
+/* animacion scroll */
+
+
+.nav-item.active {
+
+transform: scale(1.3);
+
+}
+
+/* carrusel */
+
+#carouselExampleDark .carousel-item img {
+    /* Aquí aplicas estilos a todo el bloque */
+    height: 700px;
+    
+}
+
+#menu-icon{
+    font-size: 36px;
+    color:rgba(227, 83, 0, 0.886);
+    display: none;
+}
+
+@media (max-width: 1200px){
+    .header {
+        padding: 1.25rem 4%;
+    }
+}
+
+@media (max-width: 900px){
+    #menu-icon {
+        display:block
+    }
+    
+    .header .nav-links {
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        width: 100%;
+        height: 425px;
+        padding: .5rem 4%;
+        background: rgba(29, 20, 40, .6);
+        backdrop-filter: blur(10px);
+        border-bottom: 2px solid #8B1D4F; 
+         /* Efecto de desenfoque de cristal */
+        
+        display: flex;
+        flex-direction: column; /* Alinea los enlaces uno debajo del otro */
+        align-items: center;
+        transition: 0.5s;
+        
+    }
+    .header .nav-links.active {
+        left: 0;
+    }
+    .header .nav-links li{
+        display: block;
+        margin: 1.5rem 0;
+        width: 100%; 
+        text-align: center;
+    }
+    .header .nav-links a{
+        font-size: 1.2rem;
+        display: inline-block;
+
+    }
+
+}

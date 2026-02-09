@@ -1,0 +1,165 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--cdnbootstrap-->    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <!-- bootswatch-->
+
+<!--fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<!--css-->
+
+    <link rel="stylesheet" href="{% static 'media/css/estilos.css' %}">
+
+    <style> body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSITRA</title>
+</head>
+
+<!--Carrusel-->
+<body>
+  <div class="container">
+
+
+
+<!--navbar-->
+
+<!--  <nav id="navbar-insitra" class="navbar navbar-expand-lg sticky-top bg-body-tertiary fixed-top ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'inicio' %}">INSITRA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'nosotros' %}">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'industrias' %}">Industria</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'soluciones' %}">Soluciones y Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'contacto' %}">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+-->
+
+
+
+<header class="header">
+  <div class="logo">
+    <img style="height: 85px; width: auto" src="{% static 'media/img/insitra.png' %}" alt="logo de la marca">
+  </div>
+  <nav class="navbar"> 
+    <i class="bx bx-menu" id="menu-icon"></i> 
+
+  <ul class="nav-links">
+    <li id="inicio">
+      <a href="{% url 'inicio' %}" class="nav-item">Inicio</a>
+    </li>
+    <li id="nosotros">
+      <a href="{% url 'nosotros' %}">Nosotros</a>
+    </li>
+    <li id="industrias">
+      <a href="{% url 'industrias' %}">Industria</a>
+    </li>
+    <li id="soluciones">
+      <a href="{% url 'soluciones' %}">Soluciones y Servicios</a>
+    </li>
+    <li id="contacto">
+      <a href="{% url 'contacto' %}">Contacto</a>
+    </li>
+  </ul>
+    </nav>
+</header>
+
+</div>
+
+
+
+
+
+
+
+
+
+    {% block content %}
+    {% endblock content %}
+
+   
+   
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<footer class="bg-dark text-white pt-5 pb-4" style="margin-bottom: 0px;">
+  <div class="container text-center text-md-start">
+    <div class="row text-center text-md-start">
+      
+      <!-- Columna 1: Info Empresa -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-primary">INSITRA</h5>
+        <p>Soluciones tecnológicas integrales en sistemas de monitoreo y videovigilancia.</p>
+      </div>
+
+      <!-- Columna 2: Enlaces -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">Servicios</h5>
+        <p><a href="#" class="text-white text-decoration-none">Peaje</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Monitoreo</a></p>
+      </div>
+
+      <!-- Columna 3: Contacto -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">Contacto</h5>
+        <p><a href="#" class="text-white text-decoration-none">info@insitra.com.mx</a></p>
+        <p><a href="#" class="text-white text-decoration-none">facturacion@insitra.com.mx</a></p>
+        <p><a href="#" class="text-white text-decoration-none">(+52) 1 56 1067 7325</a></p>
+        <p><a href="#" class="text-white text-decoration-none">(+52) 1 56 1040 1997</a></p>
+        
+
+      </div>
+      
+    </div>
+
+    <hr class="mb-4">
+
+    <!-- Copyright -->
+    <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8">
+        <p>© 2024 Todos los derechos reservados: 
+          <a href="#" style="text-decoration: none;"><strong class="text-primary">INSITRA</strong></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="{% static 'media/js/animaciones.js' %}"></script>
+</body>
+</html>
